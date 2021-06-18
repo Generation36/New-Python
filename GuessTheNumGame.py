@@ -1,5 +1,4 @@
 #Objective Guess the Correct Number in as few attempts possible
-
 import random
 import sys
 
@@ -15,18 +14,19 @@ name = input()
 
 print("It is nice to meet you " + name + "!")
 print("Would you like to play a game? (Y/N)")
-
 init = input()
 
-if init == "Y":
-    startGameSequence()
+while init:
+    if init == "Y":
+        startGameSequence()
+        break
 
-elif init == "N":
-    sys.exit()
+    elif init == "N":
+        sys.exit()
 
-elif init != "Y" or "N":
-    while init != "Y" or "N":
-        print("Invalid Entry. Please enter a Y or N.")
+    elif init != "Y" or "N":
+            print("Invalid Entry. Please enter a Y or N.")
+            init = input()
 
 
 
