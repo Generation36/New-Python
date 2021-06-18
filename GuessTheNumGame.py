@@ -1,6 +1,7 @@
 #Objective Guess the Correct Number in as few attempts possible
 
 import random
+import sys
 
 #Function declarations
 def startGameSequence():
@@ -21,7 +22,7 @@ if init == "Y":
     startGameSequence()
 
 elif init == "N":
-    exit()
+    sys.exit()
 
 elif init == "":
     print("Invalid Entry. Please enter a Y or N.")
