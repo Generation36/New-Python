@@ -24,8 +24,9 @@ if init == "Y":
 elif init == "N":
     sys.exit()
 
-elif init == "":
-    print("Invalid Entry. Please enter a Y or N.")
+elif init != "Y" or "N":
+    while init != "Y" or "N":
+        print("Invalid Entry. Please enter a Y or N.")
 
 
 
