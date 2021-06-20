@@ -9,8 +9,16 @@ def startGameSequence():
 
     #prompts player to take a guess
     print("I am thinking of a number between 1 and 10.\nYou have 3 guesses.")
-    playersGuess = input()
-
+    numGuesses = 3
+    for x in range (0,3):
+        playersGuess = input()
+        if playersGuess == secretNum:
+            print("Congratulations! You guessed the right number!")
+        elif playersGuess != secretNum:
+            numGuesses -= 1;
+            print("I'm sorry, try again.\nYou have " + str(numGuesses) +" left.")
+            if numGuesses == 0:
+                print("I'm sorry you lost. Better luck next time.")
 
 #Greeting Message 
 print("Hello! What is your name?")
@@ -27,11 +35,11 @@ while init:
         break
 
     elif init == "N" or "n":
-        sys.exit()
+        exit()
 
-    elif init != "Y" or "N" or "y" or "n":
-            print("Invalid Entry. Please enter a Y or N.")
-            init = input()
+    else:
+        print("Invalid Entry. Please enter a Y or N.")
+        init = input()
 
 
 
