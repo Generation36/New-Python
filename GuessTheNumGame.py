@@ -12,11 +12,14 @@ def startGameSequence():
     numGuesses = 3
     for x in range (0,3):
         playersGuess = input()
+
         if playersGuess == secretNum:
             print("Congratulations! You guessed the right number!")
+
         elif playersGuess != secretNum:
             numGuesses -= 1;
             print("I'm sorry, try again.\nYou have " + str(numGuesses) +" left.")
+            
             if numGuesses == 0:
                 print("I'm sorry you lost. Better luck next time.")
 
@@ -35,7 +38,7 @@ while init:
         break
 
     elif init == "N" or "n":
-        exit()
+        sys.exit()
 
     else:
         print("Invalid Entry. Please enter a Y or N.")
