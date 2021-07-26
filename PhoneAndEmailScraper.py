@@ -1,9 +1,8 @@
 #TODO: 
 import re, pyperclip
 #
-# create a regex for phone numbers
 
-re.compile(r'''
+phoneRegex = re.compile(r'''
 # Types of phone numbers include:
 # 123-456-7890, 123-4567, (123) 456-7890, 555-0000, ext 12345, ext. 12345, x12345
 
@@ -17,6 +16,15 @@ re.compile(r'''
 
 ''', re.VERBOSE)
 # create a regex for email addresses
+
+emailRegex = re.compile(r'''
+\w{1,21}        # address before extension
+\w{1,21}        # email host extension
+\w{1,4}         # website extension
+
+
+
+''', re.VERBOSE)
 # get the text off the clipboard
 # extract the email/phone from this text
 # copy the extracted email/phone to the clipboard
