@@ -28,10 +28,9 @@ wordsList = r.text.split()
 word = wordsList[random.randint(0, len(wordsList))]
 
 print("Your goal is to type the word, " + word + " 5 times as fast as you can. \nReady to begin (y/n)?")
-res = input()
-gameBool = res.lower()
-while(True):
 
+while(True):
+    gameBool = input().lower()
     if(gameBool == "y"):
         timeTaken, mistakesMade = startTyping()
         print("You have made " + str(mistakesMade) + " mistake(s). \nLets see how well you performed.")
@@ -42,7 +41,7 @@ while(True):
     
     else:
         print("Invalid response. Acceptable inputs: (y/n)")
-        gameBool = input().lower()
+    
 
 # Plotting Data
 x = [1,2,3,4,5]
