@@ -24,11 +24,11 @@ def calcSavingTime(salary, portion, cost, annualReturn, percentRaise):
             salary += (salary * percentRaise)
     return monthsReq
 
-def calcBestSavingRate(salary, portion, cost, annualReturn, percentRaise):
-    recommendSavPortion = 0.0
+# def calcBestSavingRate(salary, portion, cost, annualReturn, percentRaise):
+#     recommendSavPortion = 0.0
 
 
-    return recommendSavPortion
+#     return recommendSavPortion
 
 
 annualSalary, portionSaved, totalHouseCost, semiAnnualRaise = financialInfoRequest();
